@@ -191,9 +191,9 @@ export default function StackVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto items-start">
       
       {/* LEFT SIDE (60% width) */}
-      <div className="w-full lg:w-[60%] flex flex-col gap-6">
+      <div className="w-full lg:w-[60%] flex flex-col gap-6 min-w-0">
         {/* SECTION 1: VISUALIZATION */}
-        <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-end relative overflow-hidden">
+        <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-end relative overflow-hidden overflow-y-auto">
           
           <div className="flex flex-col items-center justify-end w-full min-h-[300px] pb-8 relative">
             {stack.length === 0 ? (

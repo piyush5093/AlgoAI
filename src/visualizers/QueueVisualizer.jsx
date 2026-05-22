@@ -191,9 +191,9 @@ export default function QueueVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto items-start">
       
       {/* LEFT SIDE (60% width) */}
-      <div className="w-full lg:w-[60%] flex flex-col gap-6">
+      <div className="w-full lg:w-[60%] flex flex-col gap-6 min-w-0">
         {/* SECTION 1: VISUALIZATION */}
-        <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden">
+        <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden overflow-x-auto">
           
           <div className="flex items-center justify-center w-full min-h-[200px] relative">
             {queue.length === 0 ? (

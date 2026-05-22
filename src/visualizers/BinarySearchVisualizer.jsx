@@ -288,14 +288,14 @@ export default function BinarySearchVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto items-start">
       
       {/* LEFT SIDE (60% width) */}
-      <div className="w-full lg:w-[60%] flex flex-col gap-6">
+      <div className="w-full lg:w-[60%] flex flex-col gap-6 min-w-0">
         {/* SECTION 1: BOX DISPLAY */}
         <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[300px] flex flex-col items-center justify-center gap-6 relative">
           
           <div className="flex items-center justify-center gap-2 sm:gap-4 overflow-x-auto w-full pb-8">
             {array.map((item, idx) => {
               return (
-                <div key={item.id} className="flex flex-col items-center gap-2 relative">
+                <div key={item.id} className="flex flex-col items-center gap-2 relative shrink-0">
                   <div 
                     className="flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-lg shadow-lg font-bold text-white text-lg sm:text-xl transition-all duration-300 ease-in-out shrink-0 border border-white/10"
                     style={{
@@ -379,7 +379,7 @@ export default function BinarySearchVisualizer() {
           </div>
 
           <div className="flex flex-wrap items-end gap-3 pt-4 border-t border-gray-800">
-            <div className="flex-1 min-w-[200px] flex flex-col gap-1">
+            <div className="flex-1 w-full sm:w-auto min-w-[200px] flex flex-col gap-1">
               <label className="text-sm text-gray-400">Custom Array (comma separated)</label>
               <input
                 type="text"

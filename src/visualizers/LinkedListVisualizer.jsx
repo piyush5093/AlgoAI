@@ -342,7 +342,7 @@ export default function LinkedListVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-7xl mx-auto items-start">
       
       {/* LEFT SIDE (60% width) */}
-      <div className="w-full lg:w-[60%] flex flex-col gap-6">
+      <div className="w-full lg:w-[60%] flex flex-col gap-6 min-w-0">
         {/* SECTION 1: VISUALIZATION */}
         <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-8 min-h-[400px] flex flex-col items-center justify-center relative overflow-hidden overflow-x-auto">
           
@@ -356,7 +356,7 @@ export default function LinkedListVisualizer() {
               <div className="flex items-center gap-2 relative mt-8">
                 {list.map((item, idx) => (
                   <React.Fragment key={item.id}>
-                    <div className="flex flex-col items-center gap-2 relative">
+                    <div className="flex flex-col items-center gap-2 relative shrink-0">
                       {/* Position / Head / Tail labels */}
                       <div className="absolute -top-12 flex flex-col items-center w-full whitespace-nowrap">
                         <span className="text-xs text-gray-400 font-mono">Index: {idx}</span>

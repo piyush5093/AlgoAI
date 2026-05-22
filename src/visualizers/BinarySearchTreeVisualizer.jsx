@@ -621,14 +621,14 @@ export default function BinarySearchTreeVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-[1400px] mx-auto items-start pb-20">
       
       {/* LEFT SIDE (65% width) */}
-      <div className="w-full lg:w-[65%] flex flex-col gap-6">
+      <div className="w-full lg:w-[65%] flex flex-col gap-6 min-w-0">
         
         {/* SECTION 1: VISUALIZATION */}
         <div 
           className="bg-[#1a1a1a] rounded-xl border border-gray-800 relative overflow-x-auto overflow-y-hidden"
           style={{ minHeight: `${containerHeight}px` }}
         >
-          <div className="min-w-[600px] w-full h-full relative" style={{ height: `${containerHeight}px` }}>
+          <div className="min-w-[300px] sm:min-w-[600px] w-full h-full relative" style={{ height: `${containerHeight}px` }}>
             {/* Draw Edges */}
             <svg className="absolute top-0 left-0 w-full h-full pointer-events-none">
               {layout.edges.map(edge => (
@@ -675,7 +675,7 @@ export default function BinarySearchTreeVisualizer() {
         {/* SECTION 2: CONTROLS */}
         <div className="bg-[#1a1a1a] rounded-xl border border-gray-800 p-6 flex flex-col gap-6">
           <div className="flex flex-wrap items-center gap-4">
-            <div className="flex-1 min-w-[150px]">
+            <div className="flex-1 w-full sm:w-auto min-w-[150px]">
               <input
                 type="number"
                 value={inputValue}

@@ -345,7 +345,7 @@ export default function DijkstraVisualizer() {
       <div className="flex flex-col lg:flex-row gap-6 w-full max-w-[1400px] mx-auto items-start pb-20">
 
         {/* LEFT SIDE (65% width) */}
-        <div className="w-full lg:w-[65%] flex flex-col gap-6">
+        <div className="w-full lg:w-[65%] flex flex-col gap-6 min-w-0">
 
           {/* SECTION 1: VISUALIZATION */}
           <div className="bg-[#111111] rounded-2xl border border-gray-800 relative overflow-x-auto overflow-y-hidden shadow-[inset_0_0_50px_rgba(0,0,0,0.5)]">
